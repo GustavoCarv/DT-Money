@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const TransactionContainer = styled.div`
     margin-top: 4rem;
+    max-width: 1120px;  
+    margin: 0 auto;
 
     table {
         width: 100%;

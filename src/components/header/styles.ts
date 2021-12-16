@@ -27,7 +27,7 @@ export const Content = styled.div`
         transition: background-color 0.2s;
 
         &:hover {
-            filter: brightness(90%);
+            
             background: #FFF;
             color: var(--blue-light);
         } 
