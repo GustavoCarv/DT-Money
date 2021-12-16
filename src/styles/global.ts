@@ -71,5 +71,22 @@ export const GlobalStyle = createGlobalStyle`
         position: relative;
         border-radius: 0.25rem;
     }
+    
+    .react-modal-close {
+        position: absolute;
+        top: 1.5rem ;
+        right: 1.5rem;
+        border: 0;
+        transform: rotate(45deg) ;
+        font-size: 2rem;
+        background: transparent;
+        cursor: pointer;
 
+        transition: color 200ms;
+
+        &:hover {
+            color: var(--red);
+        }
+
+    }
 `
