@@ -4,8 +4,9 @@ import { Dashboard } from "./components/dashboard/index";
 import { NewTransactionModal } from "./components/newTransactionModal/index";
 import { TransactionTable } from "./components/transactionTable/index";
 import { createServer } from "tls";
-import Modal from "react-modal";
 
+import Modal from "react-modal";
+import { TransactionProvider } from "./TransactionContext";
 import { useState } from "react";
 
 Modal.setAppElement("#root");
@@ -13,6 +14,8 @@ Modal.setAppElement("#root");
 function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] =
     useState(false);
+    
+    
 
   function handleNewTransactionModalOpen() {
     setIsNewTransactionModalOpen(true);
@@ -23,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <TransactionProvider>
       <Header onOpenTransactionModal={handleNewTransactionModalOpen} />
       <Dashboard />
       <TransactionTable />
@@ -32,7 +35,7 @@ function App() {
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleNewTransactionModalClose}
       />
-    </div>
+    </TransactionProvider>
   );
 }
 
