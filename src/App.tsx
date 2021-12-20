@@ -6,7 +6,7 @@ import { TransactionTable } from "./components/transactionTable/index";
 import { createServer } from "tls";
 
 import Modal from "react-modal";
-import { TransactionProvider } from "./TransactionContext";
+import { TransactionProvider } from "./hooks/useTransactions";
 import { useState } from "react";
 
 Modal.setAppElement("#root");

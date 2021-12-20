@@ -13,7 +13,7 @@ createServer  ({
       transactions: [
         {
           id: 1,
-          title: "Freelance",
+          title: "Freelancer",
           type: 'deposit',
           amount: 1000,
           category: 'Dev',
